@@ -227,8 +227,19 @@ a.button small {
   border-radius: 8px;
   background: #2879d0 url(../images/github-button.png) center no-repeat;
 }
-
+/**
 header span.searchbar {
+  position: absolute;
+  padding: 10px;
+  background: #e1e1e1;
+  right: 0;
+  bottom: -40px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+**/
+span.searchbar {
   position: absolute;
   padding: 10px;
   background: #e1e1e1;
@@ -242,7 +253,7 @@ header span.searchbar {
 #searchbar {
   height: 20px;
   line-height: 20px;
-  width: 240px;
+  width: 200px;
   font-size: 16px;
   padding: 0 4px 0 20px;
   -webkit-border-radius: 4px;
