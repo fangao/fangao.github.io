@@ -64,6 +64,7 @@ a:hover {
 }
 
 header {
+  height: 100px;
   padding-top: 40px;
   padding-bottom: 40px;
   font-family: Arial, serif; 
@@ -244,7 +245,7 @@ span.searchbar {
   padding: 10px;
   background: #e1e1e1;
   right: 0;
-  bottom: -40px;
+  /**bottom: -40px;**/
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -253,7 +254,7 @@ span.searchbar {
 #searchbar {
   height: 20px;
   line-height: 20px;
-  width: 200px;
+  width: 152px;
   font-size: 16px;
   padding: 0 4px 0 20px;
   -webkit-border-radius: 4px;
