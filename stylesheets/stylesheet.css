@@ -57,10 +57,11 @@ body {
 }
 
 a {
-  color: #2879d0;
+  color: #000000;
 }
 a:hover {
-  color: #2268b2;
+  color: #696969;
+  text-decoration:none; 
 }
 
 header {
@@ -204,6 +205,10 @@ aside#sidebar img {
   margin-bottom: 20px;
 }
 
+aside#sidebar p a {
+  color: #CCCCCC;
+}
+
 aside#sidebar .searchbox {
   margin-bottom: 20px;
 }
@@ -244,10 +249,10 @@ header span.searchbar {
 }
 **/
 span.searchbar {
-  position: absolute;
+  /**position: absolute;**/
   padding: 10px;
   background: #e1e1e1;
-  right: 0;
+  /**right: 0;**/
   /**bottom: -40px;**/
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -683,7 +688,7 @@ footer a:hover {
   padding: 0 5px;
   text-align: center;
   color: white;
-  background: gray;
+  background: rgb(226, 226, 226);
   border: none;
 }
 
@@ -702,7 +707,7 @@ footer a:hover {
   line-height: 20px;
   font-size: 14px;
   color: gray;
-  font-style: italic;
+  /**font-style: italic;**/
   display: inline-block;
 }
 
