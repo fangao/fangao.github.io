@@ -64,7 +64,7 @@ a:hover {
 }
 
 header {
-  height: 100px;
+  height: 80px;
   padding-top: 40px;
   padding-bottom: 40px;
   font-family: Arial, serif; 
@@ -204,6 +204,9 @@ aside#sidebar img {
   margin-bottom: 20px;
 }
 
+aside#sidebar .searchbox {
+  margin-bottom: 20px;
+}
 #downloads {
   margin-bottom: 40px;
 }
