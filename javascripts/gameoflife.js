@@ -108,7 +108,9 @@ function init(){
 	// 	scount = 0;
 	// 	getNewL(WelcomeWords[i],i);
 	// };
-	getNewL(WelcomeWords[scount],scount)
+	//getNewL(WelcomeWords[scount],scount);
+	getNewL(Words1,scount);
+
 }
 
 function getNewL(word,line){
