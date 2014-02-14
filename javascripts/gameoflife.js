@@ -97,7 +97,8 @@ var Words2 = ['>','世','界','的','尽','头','在','哪','，','人','被','�
 var Words3 = ['>','等','等','等','等'];
 var Words4 = ['>','他','想','找','个','人','把','他','的','想','法','阐','述','出','来','，','结','果','开','口','发','现','所','有','文','字','都','化','为','了'];
 var Words5 = ['> ','. ','. ','.']
-var Words5 = ['>','hodor.'];
+var Words6 = ['>','hodor.'];
+var Words7 = ['《冰与火之歌》']
 var word =[Words1,Words2,Words3,Words4,Words5];
 //var WelcomeWords =[Words1];
 init();
@@ -123,8 +124,8 @@ function getNewWord(){
 	}
 	else{
 		ctx.fillStyle = "white";
-		ctx.font = 12+"pt";
-		ctx.fillText(word[sline][scount], 220+scount*14,20*(sline+1));
+		ctx.font = 13+"pt";
+		ctx.fillText(word[sline][scount], 215+scount*14,20*(sline+1));
 		scount++;
 	}
 	setTimeout(getNewWord,250);
