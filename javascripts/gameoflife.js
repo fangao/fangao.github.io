@@ -101,13 +101,14 @@ var WelcomeWords =[Words1];
 init();
 
 function init(){
-	//scount =0;
+	scount =0;
 	ctx.fillStyle="#2e7bcf";
 	ctx.fillRect(0,0,cwidth,cheight);
-	for (var i = 0; i <=WelcomeWords.length; i++) {
-		scount = 0;
-		getNewL(WelcomeWords[i],i);
-	};
+	// for (var i = 0; i <=WelcomeWords.length; i++) {
+	// 	scount = 0;
+	// 	getNewL(WelcomeWords[i],i);
+	// };
+	getNewL(WelcomeWords[scount],scount)
 }
 
 function getNewL(word,line){
