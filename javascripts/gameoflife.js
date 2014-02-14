@@ -91,17 +91,30 @@ canvas.height = cheight;
 var ctx = canvas.getContext('2d');
 var cells = new Array();
 var scount;
+var WelcomeWords = ['欢','迎','你','们'];
 
 init();
 
 function init(){
+	scount =0;
 	ctx.fillStyle="#2e7bcf";
 	ctx.fillRect(0,0,cwidth,cheight);
 
-	ctx.fillStyle = "black";
-	ctx.font = "italic "+30+"pt Arial ";
-	ctx.fillText("Welcome", 20,60);
-	//getNewL();
+	getNewL();
+}
+
+function getNewL(){
+	if (scount>=WelcomeWords.length) {
+		return;
+	}
+	else{
+		ctx.fillStyle = "white";
+		ctx.font = 10+"pt";
+		ctx.fillText(WelcomeWords[scount], 200+scount*10,50);
+		scount++;
+	}
+	setTimeout(getNewL,2000);
+
 }
 
 // function getNewL(){
