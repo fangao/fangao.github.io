@@ -109,8 +109,8 @@ function getNewL(){
 	}
 	else{
 		ctx.fillStyle = "white";
-		ctx.font = 10+"pt";
-		ctx.fillText(WelcomeWords[scount], 200+scount*10,50);
+		ctx.font = 12+"pt";
+		ctx.fillText(WelcomeWords[scount], 220+scount*14,50);
 		scount++;
 	}
 	setTimeout(getNewL,2000);
