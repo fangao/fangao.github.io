@@ -97,7 +97,7 @@ var Words2 = ['>','世','界','的','尽','头','在','哪','，','人','被','�
 var Words3 = ['>','等','等','等','等'];
 var Words4 = ['>','他','想','找','个','人','把','他','的','想','法','阐','述','出','来','，','结','果','开','口','发','现','所','有','文','字','都','化','为','了'];
 var Words5 = ['>','Hodor!'];
-var WelcomeWords =[Words1,Words2,Words3,Words4,Words5];
+var word =[Words1,Words2,Words3,Words4,Words5];
 //var WelcomeWords =[Words1];
 init();
 
@@ -111,11 +111,11 @@ function init(){
 	// 	getNewL(WelcomeWords[i],i);
 	// };
 	//getNewL(WelcomeWords[scount],scount);
-	getNewWord(WelcomeWords);
+	getNewWord();
 
 }
 
-function getNewWord(word){
+function getNewWord(){
 	if (scount>=word[sline].length) {
 		if(sline<word.length) {sline++;}
 		else return;
