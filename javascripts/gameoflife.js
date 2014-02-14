@@ -91,29 +91,35 @@ canvas.height = cheight;
 var ctx = canvas.getContext('2d');
 var cells = new Array();
 var scount;
-var WelcomeWords = ['欢','迎','你','们'];
-
+var Words1 = ['> ','某','人','醒','来','发','现','自','己','知','道','了','宇','宙','所','有','的','秘','密'];
+var Words2 = ['> ','世','界','的','尽','头','在','哪','，','人','被','赋','予','的','使','命','，','人','生','的','意','义','，','真','神','究','竟','是','哪','一','个'];
+var Words3 = ['> ','等','等','等','等'];
+var Words4 = ['> ','他','想','找','个','人','把','他','的','想','法','阐','述','出','来','，','结','果','开','口','发','现','所','有','文','字','都','化','为','了'];
+var Words5 = ['> ','Hodor!'];
+var WelcomeWords =[Words1,Words2,Words3,Words4,Words5];
 init();
 
 function init(){
-	scount =0;
+	//scount =0;
 	ctx.fillStyle="#2e7bcf";
 	ctx.fillRect(0,0,cwidth,cheight);
-
-	getNewL();
+	for (var i = 0; i <=WelcomeWords.length; i++) {
+		scount = 0;
+		getNewL(WelcomeWords[i],i);
+	};
 }
 
-function getNewL(){
-	if (scount>=WelcomeWords.length) {
+function getNewL(word,line){
+	if (scount>=word.length) {
 		return;
 	}
 	else{
 		ctx.fillStyle = "white";
 		ctx.font = 12+"pt";
-		ctx.fillText(WelcomeWords[scount], 220+scount*14,50);
+		ctx.fillText(word[scount], 220+scount*14,20*(line+1));
 		scount++;
 	}
-	setTimeout(getNewL,2000);
+	setTimeout(getNewL,1000);
 
 }
 
