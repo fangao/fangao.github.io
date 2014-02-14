@@ -117,7 +117,7 @@ function init(){
 
 function getNewWord(){
 	if (scount>=word[sline].length) {
-		if(sline<word.length) {sline++;}
+		if(sline<word.length-1) {sline++;scount=0;}
 		else return;
 	}
 	else{
