@@ -127,7 +127,7 @@ function getNewWord(){
 		ctx.fillText(word[sline][scount], 220+scount*14,20*(sline+1));
 		scount++;
 	}
-	setTimeout(getNewWord,300);
+	setTimeout(getNewWord,250);
 
 }
 
