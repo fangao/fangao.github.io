@@ -106,7 +106,7 @@ init();
 function init(){
 	scount = 0;
 	sline = 0;
-	ctx.fillStyle="#2e7bcf";
+	ctx.fillStyle="#E0E0E0";
 	ctx.fillRect(0,0,cwidth,cheight);
 	// for (var i = 0; i <=WelcomeWords.length; i++) {
 	// 	scount = 0;
