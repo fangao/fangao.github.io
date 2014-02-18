@@ -17,16 +17,31 @@
     <script src="/javascripts/config.js"></script>
     <script src="/javascripts/base64.js"></script>
     <script src="/javascripts/showdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/page-player.css" />
+  <!-- soundManager.useFlashBlock: related CSS -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/flashblock.css" />
+    <script type="text/javascript" src="/javascripts/soundmanager2.js"></script>
+    <script type="text/javascript" src="/javascripts/page-player.js"></script>
+    <script type="text/javascript">
+
+    soundManager.setup({
+      url: 'swf/'
+    });
+
+    </script>
     <!-- Change this to your site title -->
     <title>Hooloo</title>
   </head>
 
   <body>
     <header>
-      <canvas id="gameoflife"></canvas>
+      <!--<canvas id="gameoflife"></canvas>-->
       <div class="inner">
         <!-- Change this to your site title -->
         <!--<a href="/" onclick = "return false"><h1 onclick="home()">Hooloo</h1></a> -->
+         <ul class="playlist">
+          <li><a href="images/music.mp3"><img src="images/test-banner-2.jpg"></a></li>
+        </ul>
       </div>
     </header>
 
@@ -82,6 +97,6 @@
   <!--
   <script src="/javascripts/main.js"></script>
   -->
-  <script src="/javascripts/gameoflife.js"></script>
+  <!--<script src="/javascripts/gameoflife.js"></script>-->
   </body>
 </html>
