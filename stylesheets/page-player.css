@@ -55,7 +55,7 @@ ul.playlist li {
  /* assume all items will be sounds rather than wait for onload etc. in this example.. may differ for your uses. */
  position:relative;
  display:block;
- width:auto;
+ width:808px;
  font-size:2em;
  color:#666;
  padding:0.25em 0.5em 0.25em 0.5em;
@@ -98,7 +98,7 @@ ul.playlist li:hover a {
 
 ul.playlist li.sm2_playing,
 ul.playlist li.sm2_playing:hover {
- background-color:#6699cc;
+ background-color:#FFFFFF;
 }
 
 ul.playlist li.sm2_paused {
@@ -186,14 +186,14 @@ ul.playlist li .controls .statusbar .annotation {
 }
 
 ul.playlist li .controls .statusbar .position {
- background-color:#336699;
- border-right:3px solid #336699;
+ background-color:#F8F8F8;
+ border-right:3px solid #2793E4;
  border-radius:3px;
 }
 
 ul.playlist li.sm2_paused .controls .statusbar .position {
- background-color:#666;
- border-color:#666;
+ background-color:#FDFDFD;
+ border-color:#FA1C1C;
 }
 
 ul.playlist li .controls .statusbar .loading {
