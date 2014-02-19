@@ -1,0 +1,46 @@
+简单实现**回到顶部**小功能。
+
+首先，创建一个div：
+
+    <div id="toTop">^ 回到顶部</div>
+
+然后增加样式：
+
+    #toTop {
+      width: 70px;
+      border: 1px solid #DFDCDC;
+      background: white;
+      text-align: center;
+      padding: 4px;
+      position: fixed;           /* 重要 */
+      bottom: 10px;
+      right: 10px;
+      font-size: 11px;
+      color: #333;
+      cursor: pointer;
+      font-family: cursive;    /* 改变^样式 */
+      display: none;
+    }
+
+最后使用[jquery][1]实现动态效果，代码如下：
+
+    <script type="text/javascript">
+    $(function() {
+    	$(window).scroll(function() {
+    		if($(this).scrollTop() >100) {
+    			$('#toTop').fadeIn();	
+    		} else {
+    			$('#toTop').fadeOut();
+    		}
+    	});
+     
+    	$('#toTop').click(function() {
+    		$('body,html').animate({scrollTop:0},800);
+    	});	
+    });
+    </script>
+
+最终的效果见本博客，简洁美观。
+
+
+  [1]: http://jquery.com
