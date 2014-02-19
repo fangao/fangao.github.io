@@ -96,9 +96,26 @@
         </aside>
       </div>
       <footer>不用科学解释宗教，不拿对错对待爱情 <a href="http://weibo.com/322859599">@梵高先生</a></footer>
+      <div id="toTop">^ 回到顶部</div>
     </div>
   <script src="/javascripts/search.js"></script>
   <script src="/javascripts/getmd.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(window).scroll(function() {
+      if($(this).scrollTop() > 100) {
+        $('#toTop').fadeIn(); 
+      } else {
+        $('#toTop').fadeOut();
+      }
+    });
+   
+    $('#toTop').click(function() {
+      $('body,html').animate({scrollTop:0},800);
+    });
+    });
+  </script>
   <!--
   <script src="/javascripts/main.js"></script>
   -->

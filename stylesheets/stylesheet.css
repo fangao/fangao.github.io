@@ -215,6 +215,22 @@ aside#sidebar p a {
 aside#sidebar .searchbox {
   margin-bottom: 20px;
 }
+
+#toTop {
+  width: 100px;
+  border: 1px solid #ccc;
+  background: white;
+  text-align: center;
+  padding: 4px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 11px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+
+}
 #downloads {
   margin-bottom: 40px;
 }
