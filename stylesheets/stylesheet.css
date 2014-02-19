@@ -217,8 +217,8 @@ aside#sidebar .searchbox {
 }
 
 #toTop {
-  width: 100px;
-  border: 1px solid #ccc;
+  width: 70px;
+  border: 1px solid #DFDCDC;
   background: white;
   text-align: center;
   padding: 4px;
@@ -228,6 +228,7 @@ aside#sidebar .searchbox {
   font-size: 11px;
   color: #333;
   cursor: pointer;
+  font-family: cursive;
   display: none;
 
 }
