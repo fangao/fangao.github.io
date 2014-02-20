@@ -1,5 +1,7 @@
 简单实现**回到顶部**小功能。
 
+![](postimg/back-to-top.png)
+
 首先，创建一个div：
 
     <div id="toTop">^ 回到顶部</div>
