@@ -40,7 +40,7 @@ weiboLogin.click(function(){
 	});
 });
 chartLoad.click(function(){
-	$('#chartview').highcharts({
+	$('#chartView').highcharts({
             title: {
                 text: '我的体重跟踪表',
                 x: -20 //center
