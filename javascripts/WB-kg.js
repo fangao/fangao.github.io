@@ -1,28 +1,29 @@
 var weiboLogin = $('#wb_connect_btn');
+//构造函数，体重参数对象
+function dot(time,v){
+	this.time =time;
+	this.v=v;
+}
+//参数数组;
+var vdata=[];
 weiboLogin.click(function(){
 	WB2.login(function(){
     // 验证是否登入成功
 	    if(WB2.checkLogin()){
 	        // api 入口
 	        WB2.anyWhere(function(W){
-	            // 调用 account/get_uid 接口，获取用户信息
-	            W.parseCMD('/account/get_uid.json', function(oResult, bStatus){
+	            // 调用 user_timeline
+	            W.parseCMD('/2/statuses/user_timeline.json', function(oResult, bStatus){
 	                if(bStatus){
-	                    // 本地验证 uid 是否存在，如果存在则自动登入绑定账户，不存在则不做任何操作
-	                    $.ajax({
-	                        type: 'POST',
-	                        url: 'index.ajax.php',
-	                        data: 'ac=checkReg&uid='+oResult.uid+'&type=1',
-	                        success: function(msg){
-	                            if(msg == 1){
-	                                // 已登入，刷新页面
-	                                location.reload();
-	                            }else{
-	                                // 未绑定账号，进行绑定或者注册
-	                                // do something
-	                            }
-	                        }
-	                    });
+	                	var status = oResult.statuses;
+	                	$.each(status,function(index,item){
+	                		if (item.text.indexOf("Body Mass") !=-1) {
+	                			var kg_data = item.text.split(" ")[2];
+	                			var kg_time = new Date(itme.created_at);
+	                			var v_data = dot(kg_time.toLocaleDateString(),kg_data);
+	                			vdata.push(v_data);	
+	                		};
+	                	});
 	                }
 	            }, {}, {
 	                method : 'get',
