@@ -13,7 +13,7 @@ weiboLogin.click(function(){
 	        // api 入口
 	        WB2.anyWhere(function(W){
 	            // 调用 user_timeline
-	            W.parseCMD('/2/statuses/user_timeline.json', function(oResult, bStatus){
+	            W.parseCMD('/statuses/user_timeline.json', function(oResult, bStatus){
 	                if(bStatus){
 	                	var status = oResult.statuses;
 	                	$.each(status,function(index,item){
