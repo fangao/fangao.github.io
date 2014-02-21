@@ -14,28 +14,31 @@ weiboLogin.click(function(){
 	WB2.login(function(){
     // 验证是否登入成功
 	    if(WB2.checkLogin()){
+	    	//检查是否已经加载数据
+	    	if (vdata.length == 0) {
 	        // api 入口
-	        WB2.anyWhere(function(W){
-	            // 调用 user_timeline
-	            W.parseCMD('/statuses/user_timeline.json', function(oResult, bStatus){
-	                if(bStatus){
-	                	var status = oResult.statuses;
-	                	$.each(status,function(index,item){
-	                		if (item.text.indexOf("Body Mass") !=-1) {
-	                			var kg_data = item.text.split(" ")[2];
-	                			var kg_time = new Date(item.created_at);
-	                			var v_data = new dot(kg_time.toLocaleDateString(),kg_data);
-	                			vTime.push(v_data.time);
-	                			vBodyMass.push(v_data.v);	
-	                		};
-	                	});
+		        WB2.anyWhere(function(W){
+		            // 调用 user_timeline
+		            W.parseCMD('/statuses/user_timeline.json', function(oResult, bStatus){
+		                if(bStatus){
+		                	var status = oResult.statuses;
+		                	$.each(status,function(index,item){
+		                		if (item.text.indexOf("Body Mass") !=-1) {
+		                			var kg_data = item.text.split(" ")[2];
+		                			var kg_time = new Date(item.created_at);
+		                			var v_data = new dot(kg_time.toLocaleDateString(),kg_data);
+		                			vTime.push(v_data.time);
+		                			vBodyMass.push(parseFloat(v_data.v));	
+		                		};
+		                	});
 
-	                }
-	            }, {}, {
-	                method : 'get',
-	                cache_time : 30
-	            });
-	        });
+		                }
+		            }, {}, {
+		                method : 'get',
+		                cache_time : 30
+		            });
+		        });
+	        };
 	    }
 	});
 });
