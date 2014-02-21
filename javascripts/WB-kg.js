@@ -19,7 +19,7 @@ weiboLogin.click(function(){
 	                	$.each(status,function(index,item){
 	                		if (item.text.indexOf("Body Mass") !=-1) {
 	                			var kg_data = item.text.split(" ")[2];
-	                			var kg_time = new Date(itme.created_at);
+	                			var kg_time = new Date(item.created_at);
 	                			var v_data = dot(kg_time.toLocaleDateString(),kg_data);
 	                			vdata.push(v_data);	
 	                		};
