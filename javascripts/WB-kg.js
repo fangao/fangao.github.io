@@ -27,6 +27,7 @@ weiboLogin.click(function(){
 		                			var kg_data = item.text.split(" ")[2];
 		                			var kg_time = new Date(item.created_at);
 		                			var v_data = new dot(kg_time.toLocaleDateString(),kg_data);
+		                			vdata.push(v_data);
 		                			vTime.push(v_data.time);
 		                			vBodyMass.push(parseFloat(v_data.v));	
 		                		};
